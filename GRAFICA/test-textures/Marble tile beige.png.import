@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dirt-texture 1.png-b63f01787d5a3fb9de4cc0dbaf8cacf4.stex"
+path="res://.import/Marble tile beige.png-4dc73643461e0f8b6745f5172f2bc91c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/dirt-texture 1.png"
-dest_files=[ "res://.import/dirt-texture 1.png-b63f01787d5a3fb9de4cc0dbaf8cacf4.stex" ]
+source_file="res://GRAFICA/test-textures/Marble tile beige.png"
+dest_files=[ "res://.import/Marble tile beige.png-4dc73643461e0f8b6745f5172f2bc91c.stex" ]
 
 [params]
 
