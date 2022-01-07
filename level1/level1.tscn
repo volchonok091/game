@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://GRAFICA/lvl-textures/grass.png" type="Texture" id=1]
 [ext_resource path="res://GRAFICA/lvl-textures/temple2.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://GRAFICA/lvl-textures/sand.png" type="Texture" id=7]
 [ext_resource path="res://Phy_Player/Playermain.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GRAFICA/lvl-textures/sun.png" type="Texture" id=9]
+[ext_resource path="res://menus/GUI.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -381,3 +382,5 @@ position = Vector2( 831, 772 )
 position = Vector2( 2676, 122 )
 scale = Vector2( 5.15625, 4.9375 )
 texture = ExtResource( 9 )
+
+[node name="GUI" parent="." instance=ExtResource( 10 )]
