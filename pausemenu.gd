@@ -3,6 +3,7 @@ extends Control
 var notpaused = true
 func _ready():
 	$MarginContainer/VBoxContainer/continue.grab_focus()
+	visible = false
 
 func _input(event):
 	if event.is_action_pressed("pause"):

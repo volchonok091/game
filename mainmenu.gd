@@ -1,5 +1,4 @@
 extends Control
-
 func _ready():
 	$MarginContainer/VBoxContainer/startgame.grab_focus()
 
@@ -12,8 +11,9 @@ func _on_startgame_pressed():
 
 
 func _on_additionalinfo_pressed():
-	pass # Replace with function body.
+	pass
 
 
 func _on_qiutgame_pressed():
 	get_tree().quit()
+
