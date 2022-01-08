@@ -4,13 +4,12 @@
 
 [node name="Player" instance=ExtResource( 1 )]
 position = Vector2( 615, 946 )
-scale = Vector2( 0.2, 0.2 )
+collision_mask = 2147483650
 
 [node name="AnimatedSprite" parent="." index="0"]
-frame = 1
+frame = 3
 
 [node name="Camera2D" parent="." index="2"]
-limit_left = 0
 limit_bottom = 1080
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
