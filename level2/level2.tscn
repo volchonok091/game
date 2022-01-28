@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GRAFICA/tileset_main.tres" type="TileSet" id=1]
 [ext_resource path="res://Phy_Player/Playermain.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GRAFICA/lvl-textures/sky.png" type="Texture" id=3]
 [ext_resource path="res://GRAFICA/lvl-textures/sun.png" type="Texture" id=4]
 [ext_resource path="res://GRAFICA/scenes/door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://menus/GUI.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -29,3 +30,5 @@ position = Vector2( 59, 904 )
 
 [node name="door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 4928, 895 )
+
+[node name="GUI" parent="." instance=ExtResource( 6 )]
