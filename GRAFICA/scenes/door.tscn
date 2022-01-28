@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://door.gd" type="Script" id=1]
+[ext_resource path="res://GRAFICA/door.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "dooropens"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 11, 6, 1 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 52.3333, 41.75 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19, 42 )
+
+[node name="door" type="KinematicBody2D"]
+scale = Vector2( 3, 3 )
+collision_layer = 4
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.0340761, 0.314381 )
+scale = Vector2( -2.6584, 2.66368 )
+texture = ExtResource( 2 )
+hframes = 5
+vframes = 3
+frame = 11
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/dooropens = SubResource( 1 )
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="open door" type="CollisionShape2D" parent="PlayerDetector"]
+visible = false
+position = Vector2( -72.6667, 0.41667 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="transferingtonextlevl" type="CollisionShape2D" parent="Area2D"]
+visible = false
+modulate = Color( 0.121569, 0.933333, 0.0941176, 1 )
+position = Vector2( 0.333333, -0.999998 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_body_entered"]
+[connection signal="body_exited" from="PlayerDetector" to="." method="_on_PlayerDetector_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
