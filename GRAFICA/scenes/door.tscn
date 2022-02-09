@@ -45,7 +45,6 @@ anims/dooropens = SubResource( 1 )
 collision_layer = 4
 
 [node name="open door" type="CollisionShape2D" parent="PlayerDetector"]
-visible = false
 position = Vector2( -72.6667, 0.41667 )
 shape = SubResource( 2 )
 
@@ -53,7 +52,6 @@ shape = SubResource( 2 )
 collision_layer = 4
 
 [node name="transferingtonextlevl" type="CollisionShape2D" parent="Area2D"]
-visible = false
 modulate = Color( 0.121569, 0.933333, 0.0941176, 1 )
 position = Vector2( 0.333333, -0.999998 )
 shape = SubResource( 3 )
