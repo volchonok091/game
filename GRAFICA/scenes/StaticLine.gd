@@ -13,6 +13,8 @@ var angle
 var x
 var y
 var tornd
+var Xa
+var Ya
 func _fillingArr():
 	for n in range(30,182,2):
 		AngleArr.push_back(n)
@@ -20,9 +22,12 @@ func _findXY():
 	angle = AngleArr[rand_range(0,AngleArr.size())]
 	x = R * cos(angle) + 410
 	y = R * sin(angle) + 350
-	print(x)
-	print(y)
+	Xa = R * cos(angle / 2) + 410
+	Ya = R * sin(angle / 2) + 350
 func _drawing():
 	add_point(to)
 	add_point(from)
 	add_point(Vector2(x,y))
+func _answerLine():
+	add_point(from)
+	add_point(Vector2(Xa,Ya))

@@ -1,9 +1,5 @@
 extends KinematicBody2D
-
-
-var visable = true
 var selected = false
-
 func _process(delta):
 	if selected:
 		followMouse()
