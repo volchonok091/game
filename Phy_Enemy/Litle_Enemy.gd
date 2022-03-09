@@ -4,6 +4,7 @@ var is_moving_left = true
 
 var gravity =  12
 var velocity = Vector2(1, -1)
+onready var amount = 50
 
 var speed = 250
 

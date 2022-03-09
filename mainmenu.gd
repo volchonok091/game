@@ -7,7 +7,7 @@ func _input(event):
 		get_tree().quit()
 
 func _on_startgame_pressed():
-	get_tree().change_scene("res://levels/level1.tscn")
+	get_tree().change_scene("res://level1.tscn")
 
 
 func _on_additionalinfo_pressed():
