@@ -47,7 +47,7 @@ position = Vector2( 8, 2 )
 shape = SubResource( 1 )
 
 [node name="transportir" parent="." instance=ExtResource( 3 )]
-position = Vector2( 426, 269 )
+position = Vector2( 462, 308 )
 
 [node name="lineBody" parent="." instance=ExtResource( 5 )]
 position = Vector2( 433, 668 )

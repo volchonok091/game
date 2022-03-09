@@ -1,6 +1,6 @@
 extends Line2D
-var from = Vector2(410,350)
-var to = Vector2(660,350)
+var to = Vector2(410,350)
+var from = Vector2(660,350)
 func _ready():
 	randomize()
 	_fillingArr()
@@ -18,11 +18,18 @@ func _fillingArr():
 		AngleArr.push_back(n)
 func _findXY():
 	angle = AngleArr[rand_range(0,AngleArr.size())]
-	x = R * cos(angle) + 410
-	y = R * sin(angle) + 350
+	x = round(R * cos((angle/180.0) * 3.14) + 410)
+	y = round(R * -sin((angle/180.0) * 3.14) + 350)
 	print(x)
 	print(y)
+	print(angle)
+	print(cos(angle))
+	print(sin(angle))
+	print(cos((angle/180)) * PI)
+	print(cos(PI))
+	print(sin((angle/180)) * PI)
+	print((angle/180.0) * PI)
 func _drawing():
-	add_point(to)
 	add_point(from)
+	add_point(to)
 	add_point(Vector2(x,y))
