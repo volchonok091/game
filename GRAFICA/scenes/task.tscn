@@ -64,6 +64,7 @@ position = Vector2( 426, 269 )
 position = Vector2( 433, 668 )
 
 [node name="Container" type="Container" parent="."]
+visible = false
 margin_left = 273.0
 margin_top = 408.0
 margin_right = 591.0
