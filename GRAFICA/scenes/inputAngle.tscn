@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://GRAFICA/scenes/LineEdit.gd" type="Script" id=1]
+[ext_resource path="res://GRAFICA/scenes/inputAngle.gd" type="Script" id=2]
 
 [node name="InputAngle" type="Control"]
 anchor_right = 1.0
@@ -9,6 +10,7 @@ margin_left = 4.0
 margin_top = 3.0
 margin_right = 4.0
 margin_bottom = 3.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -54,4 +56,5 @@ align = 1
 caret_blink = true
 script = ExtResource( 1 )
 
+[connection signal="text_entered" from="MarginContainer/VBoxContainer/PanelContainer2/LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="text_entered" from="MarginContainer/VBoxContainer/PanelContainer2/LineEdit" to="MarginContainer/VBoxContainer/PanelContainer2/LineEdit" method="_on_LineEdit_text_entered"]

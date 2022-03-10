@@ -63,12 +63,32 @@ position = Vector2( 426, 269 )
 [node name="lineBody" parent="." instance=ExtResource( 5 )]
 position = Vector2( 433, 668 )
 
-[node name="InputAngle" parent="." instance=ExtResource( 7 )]
+[node name="Container" type="Container" parent="."]
 visible = false
-margin_left = -68.0
-margin_top = 99.0
-margin_right = 28.0
-margin_bottom = 164.0
+margin_left = 232.0
+margin_top = 429.0
+margin_right = 617.0
+margin_bottom = 629.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputAngle" parent="Container" instance=ExtResource( 7 )]
+margin_left = -300.0
+margin_top = -330.0
+margin_right = -204.0
+margin_bottom = -265.0
+
+[node name="Button" type="Button" parent="Container"]
+margin_left = 154.0
+margin_top = 131.0
+margin_right = 235.0
+margin_bottom = 159.0
+text = "ENTER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="body_entered" from="ColorRect/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_shape_entered" from="ColorRect/Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="pressed" from="Container/Button" to="." method="_on_Button_pressed"]

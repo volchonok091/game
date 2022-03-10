@@ -10,4 +10,14 @@ func _on_Area2D_body_entered(body):
 	if  body.is_in_group("Line"):
 		$lineBody.visible = false
 		$ColorRect/StaticLine/answerLine.drawing()
-		$InputAngle.visible = true
+#		$InputAngle.visible = true
+		$Container.visible = true
+#		if $InputAngle/MarginContainer/VBoxContainer/PanelContainer2/LineEdit.text == $ColorRect/StaticLine.angle / 2:
+#			get_tree().change_scene("res://levels/level1.tscn")
+			
+
+
+func _on_Button_pressed():
+	var Text = $Container/InputAngle/MarginContainer/VBoxContainer/PanelContainer2/LineEdit.text
+	if $ColorRect/StaticLine.angle / 2 == int(Text):
+		get_tree().change_scene("res://levels/level1.tscn")
