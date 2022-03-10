@@ -12,42 +12,22 @@ var R = 250
 var angle 
 var x
 var y
-<<<<<<< HEAD
 var Xa
 var Ya
-=======
->>>>>>> main
 var tornd
 func _fillingArr():
 	for n in range(30,182,2):
 		AngleArr.push_back(n)
 func _findXY():
 	angle = AngleArr[rand_range(0,AngleArr.size())]
-<<<<<<< HEAD
 	x = round(R * cos((angle / 180.0) * PI) + 410)
 	y = round(R * sin((angle / 180.0) * PI) + 350)
 	Xa = round(R * cos(((angle / 2) / 180.0) * PI) + 410)
 	Ya = round(R * sin(((angle / 2) / 180.0) * PI) + 350)
-=======
-	x = round(R * cos((angle/180.0) * 3.14) + 410)
-	y = round(R * -sin((angle/180.0) * 3.14) + 350)
-	print(x)
-	print(y)
-	print(angle)
-	print(cos(angle))
-	print(sin(angle))
-	print(cos((angle/180)) * PI)
-	print(cos(PI))
-	print(sin((angle/180)) * PI)
-	print((angle/180.0) * PI)
->>>>>>> main
 func _drawing():
 	add_point(from)
 	add_point(to)
 	add_point(Vector2(x,y))
-<<<<<<< HEAD
 func _answerLine():
 	add_point(Vector2(410,350))
 	add_point(Vector2(Xa,Ya))
-=======
->>>>>>> main
