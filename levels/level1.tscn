@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://GRAFICA/lvl-textures/grass.png" type="Texture" id=1]
 [ext_resource path="res://GRAFICA/lvl-textures/temple2.png" type="Texture" id=2]
@@ -10,9 +10,11 @@
 [ext_resource path="res://Phy_Player/Playermain.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GRAFICA/lvl-textures/sun.png" type="Texture" id=9]
 [ext_resource path="res://menus/GUI.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Phy_Enemy/Enemy.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Phy_Enemy/Litle_Enemy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://GRAFICA/pifagor/pifagor.tscn" type="PackedScene" id=12]
 [ext_resource path="res://GRAFICA/levelchanger.tscn" type="PackedScene" id=13]
+[ext_resource path="res://levels/level1.gd" type="Script" id=14]
+[ext_resource path="res://Phy_Player/magic/slowmo/SlowmoController.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -377,6 +379,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 20/z_index = 0
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 14 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -0.0740859
@@ -386,9 +389,6 @@ margin_bottom = 1088.41
 rect_rotation = 0.00507658
 rect_pivot_offset = Vector2( 4677.33, 836.155 )
 texture = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
@@ -411,10 +411,11 @@ texture = ExtResource( 9 )
 
 [node name="GUI" parent="." instance=ExtResource( 10 )]
 
-[node name="Small_Enemy" parent="." instance=ExtResource( 11 )]
-position = Vector2( 2810, 813 )
-scale = Vector2( 3, 3 )
-
 [node name="levelchanger" parent="." instance=ExtResource( 13 )]
 position = Vector2( 4922, 897 )
 NEXT_LEVEL = "res://levels/level2.tscn"
+
+[node name="Litle_Enemy" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2726, 858 )
+
+[node name="SlowmoController" parent="." instance=ExtResource( 15 )]
