@@ -12,7 +12,8 @@
 [ext_resource path="res://menus/GUI.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Phy_Enemy/Enemy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://GRAFICA/pifagor/pifagor.tscn" type="PackedScene" id=12]
-[ext_resource path="res://GRAFICA/levelchanger.tscn" type="PackedScene" id=13]
+[ext_resource path="res://GRAFICA/scenes/levelchanger.tscn" type="PackedScene" id=13]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )

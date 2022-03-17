@@ -16,12 +16,8 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_Button_pressed():
-#	var Text = $ColorRect2/Container/InputAngle/MarginContainer/VBoxContainer/PanelContainer2/LineEdit.text
-#	if $ColorRect2/ColorRect/StaticLine.angle / 2 == int(Text):
-#		get_tree().change_scene("res://levels/level1.tscn")
-#		$ColorRect2/transportir/Transportir.visible = false
 	var Text = $ColorRect2/Container/HScrollBar.value
-	if $ColorRect2/ColorRect/StaticLine.angle / 2 == int(Text):
+	if $ColorRect2/ColorRect/StaticLine.angle / 2 == Text:
 		get_tree().change_scene("res://levels/level1.tscn")
 		$ColorRect2/transportir/Transportir.visible = false
 
