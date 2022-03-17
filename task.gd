@@ -24,3 +24,8 @@ func _on_Button_pressed():
 	if $ColorRect2/ColorRect/StaticLine.angle / 2 == int(Text):
 		get_tree().change_scene("res://levels/level1.tscn")
 		$ColorRect2/transportir/Transportir.visible = false
+
+
+
+func _on_HScrollBar_scrolling():
+	$ColorRect2/Container/Panel/RichTextLabel.set_text(str($ColorRect2/Container/HScrollBar.value))

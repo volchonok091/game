@@ -1,8 +1,7 @@
 extends HScrollBar
-
+var input = value
 func _ready():
-	pass
+	custom_step = 1.0
 
-
-func _on_HScrollBar_changed():
-	print(value)
+func _on_HScrollBar_scrolling():
+	$ColorRect2/Container/RichTextLabel.set_text("Angle is: " + str(input))

@@ -82,27 +82,60 @@ position = Vector2( 433, 668 )
 [node name="Container" type="Container" parent="ColorRect2"]
 visible = false
 margin_left = 273.0
-margin_top = 408.0
+margin_top = 417.0
 margin_right = 591.0
-margin_bottom = 634.0
+margin_bottom = 643.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="ColorRect2/Container"]
+anchor_left = -0.0283019
+anchor_top = -0.0929204
+anchor_right = -0.0283019
+anchor_bottom = -0.0929204
+margin_left = 115.0
+margin_top = 50.0
+margin_right = 225.0
+margin_bottom = 105.0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2/Container/Panel"]
+anchor_left = 0.361635
+anchor_top = 0.221239
+anchor_right = 0.361635
+anchor_bottom = 0.221239
+margin_left = -1.77987
+margin_top = 4.83186
+margin_right = 52.2201
+margin_bottom = 35.8319
+rect_scale = Vector2( 2, 2 )
+tab_size = 24
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HScrollBar" type="HScrollBar" parent="ColorRect2/Container"]
+anchor_left = -0.0754717
+anchor_top = -0.743363
+anchor_right = -0.0754717
+anchor_bottom = -0.743363
 margin_left = 4.0
 margin_top = 330.0
 margin_right = 367.0
 margin_bottom = 350.0
-min_value = 30.0
-max_value = 182.0
+max_value = 91.0
+step = 1.0
 value = 30.0
+custom_step = 1.0
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="InputAngle" parent="ColorRect2/Container" instance=ExtResource( 7 )]
+visible = false
 anchor_left = -0.830189
 anchor_top = -1.9823
 anchor_right = 0.169811
@@ -125,5 +158,5 @@ text = "ENTER"
 
 [connection signal="body_entered" from="ColorRect2/ColorRect/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_shape_entered" from="ColorRect2/ColorRect/Area2D" to="." method="_on_Area2D_body_shape_entered"]
-[connection signal="changed" from="ColorRect2/Container/HScrollBar" to="ColorRect2/Container/HScrollBar" method="_on_HScrollBar_changed"]
+[connection signal="scrolling" from="ColorRect2/Container/HScrollBar" to="." method="_on_HScrollBar_scrolling"]
 [connection signal="pressed" from="ColorRect2/Container/Button" to="." method="_on_Button_pressed"]
