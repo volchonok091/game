@@ -3,7 +3,7 @@
 [ext_resource path="res://GRAFICA/lvl-textures/sky.png" type="Texture" id=1]
 [ext_resource path="res://GRAFICA/lvl-textures/sun.png" type="Texture" id=2]
 [ext_resource path="res://Phy_Player/Playermain.tscn" type="PackedScene" id=3]
-[ext_resource path="res://GRAFICA/tileset_main.tres" type="TileSet" id=4]
+[ext_resource path="res://GRAFICA/Main tilesets/tileset_main.tres" type="TileSet" id=4]
 [ext_resource path="res://menus/GUI.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]

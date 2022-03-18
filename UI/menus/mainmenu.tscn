@@ -3,7 +3,7 @@
 [ext_resource path="res://UI/buttons/Group 1StartGamePre.png" type="Texture" id=1]
 [ext_resource path="res://UI/buttons/StartButUnp.png" type="Texture" id=2]
 [ext_resource path="res://UI/buttons/Group 7addinfopress.png" type="Texture" id=3]
-[ext_resource path="res://mainmenu.gd" type="Script" id=4]
+[ext_resource path="res://skripts/mainmenu.gd" type="Script" id=4]
 [ext_resource path="res://UI/buttons/Group 4quitUnpe.png" type="Texture" id=5]
 [ext_resource path="res://UI/buttons/Group 6addinfounp.png" type="Texture" id=6]
 [ext_resource path="res://UI/buttons/Group 5quitPres.png" type="Texture" id=7]
