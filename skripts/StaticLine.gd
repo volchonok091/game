@@ -20,7 +20,6 @@ func _fillingArr():
 		AngleArr.push_back(n)
 func _findXY():
 	angle = AngleArr[rand_range(0,AngleArr.size())]
-	print(angle)
 	x = round(R * cos((angle / 180.0) * PI) + 410)
 	y = round(R * sin((angle / 180.0) * PI) + 350)
 	Xa = round(R * cos(((angle / 2) / 180.0) * PI) + 410)

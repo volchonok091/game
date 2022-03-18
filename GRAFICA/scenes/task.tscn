@@ -99,7 +99,6 @@ margin_right = 367.0
 margin_bottom = 350.0
 max_value = 91.0
 step = 1.0
-value = 30.0
 custom_step = 1.0
 script = ExtResource( 9 )
 __meta__ = {
