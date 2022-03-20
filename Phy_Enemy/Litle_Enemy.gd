@@ -7,7 +7,10 @@ var velocity = Vector2(1, -1)
 
 var speed = 250
 
+var stats = Enemystats
+
 func _ready():
+	stats.connect("no_health",self, "queue_free")
 	$AnimationPlayer.play("Walk")
 
 func _process(_delta):
@@ -41,8 +44,9 @@ func start_walk():
 func _on_PlayerDetector_body_entered(body):
 	$AnimationPlayer.play("Attack")
 
-
+func _on_Hurtbox_area_entered(area):
+	stats.health -= 1
 
 
 func _on_Area2D_body_entered(body):
-	get_tree().reload_current_scene()
+	pass

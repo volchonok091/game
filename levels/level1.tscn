@@ -13,8 +13,6 @@
 [ext_resource path="res://Phy_Enemy/Litle_Enemy.tscn" type="PackedScene" id=11]
 [ext_resource path="res://GRAFICA/pifagor/pifagor.tscn" type="PackedScene" id=12]
 [ext_resource path="res://GRAFICA/scenes/levelchanger.tscn" type="PackedScene" id=13]
-
-[ext_resource path="res://GRAFICA/levelchanger.tscn" type="PackedScene" id=13]
 [ext_resource path="res://levels/level1.gd" type="Script" id=14]
 [ext_resource path="res://Phy_Player/magic/slowmo/SlowmoController.tscn" type="PackedScene" id=15]
 
@@ -403,7 +401,7 @@ tile_data = PoolIntArray( 1, 8, 0, 2, 6, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 
 position = Vector2( 1298, 788 )
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 859, 764 )
+position = Vector2( 825, 767 )
 collision_layer = 2147483649
 
 [node name="Sun" type="Sprite" parent="."]
