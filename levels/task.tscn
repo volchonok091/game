@@ -1,0 +1,176 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://skripts/task.gd" type="Script" id=1]
+[ext_resource path="res://skripts/rect.gd" type="Script" id=2]
+[ext_resource path="res://GRAFICA/scenes/transportirBody.tscn" type="PackedScene" id=3]
+[ext_resource path="res://skripts/StaticLine.gd" type="Script" id=4]
+[ext_resource path="res://GRAFICA/scenes/lineBody.tscn" type="PackedScene" id=5]
+[ext_resource path="res://skripts/answerLine.gd" type="Script" id=6]
+[ext_resource path="res://Phy_Player/magic/slowmo/SlowmoController.tscn" type="PackedScene" id=7]
+[ext_resource path="res://skripts/RichTextLabel.gd" type="Script" id=8]
+[ext_resource path="res://levels/HScrollBar.gd" type="Script" id=9]
+[ext_resource path="res://levels/RichTextLabel.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 229.125, 185 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 33.0151
+
+[node name="task" type="Node2D"]
+pause_mode = 2
+position = Vector2( -1, 0 )
+script = ExtResource( 1 )
+level_name = "magic"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_right = 1917.0
+margin_bottom = 1083.0
+mouse_filter = 2
+color = Color( 1, 1, 1, 0.156863 )
+
+[node name="Container" type="Container" parent="ColorRect2"]
+visible = false
+margin_left = 273.0
+margin_top = 416.0
+margin_right = 591.0
+margin_bottom = 642.0
+
+[node name="HScrollBar" type="HScrollBar" parent="ColorRect2/Container"]
+anchor_left = -0.556289
+anchor_top = -0.610655
+anchor_right = -0.556289
+anchor_bottom = -0.610655
+margin_left = 4.0
+margin_top = 330.0
+margin_right = 367.0
+margin_bottom = 350.0
+rect_scale = Vector2( 2, 2 )
+max_value = 91.0
+step = 1.0
+script = ExtResource( 9 )
+
+[node name="Panel" type="Panel" parent="ColorRect2/Container"]
+anchor_left = -0.103472
+anchor_top = -0.10185
+anchor_right = -0.103472
+anchor_bottom = -0.10185
+margin_left = 107.12
+margin_top = 32.72
+margin_right = 217.12
+margin_bottom = 87.72
+rect_scale = Vector2( 1.5, 1.5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2/Container/Panel"]
+anchor_left = 0.362
+anchor_top = 0.221
+anchor_right = 0.362
+anchor_bottom = 0.221
+margin_left = -22.4866
+margin_top = -6.82166
+margin_right = 45.5134
+margin_bottom = 33.1783
+rect_scale = Vector2( 3, 3 )
+tab_size = 24
+script = ExtResource( 10 )
+
+[node name="Button" type="Button" parent="ColorRect2/Container"]
+anchor_left = 8.13335
+anchor_top = 12.9348
+anchor_right = 8.13335
+anchor_bottom = 12.9348
+margin_left = -2508.0
+margin_top = -2808.0
+margin_right = -2430.0
+margin_bottom = -2780.0
+rect_scale = Vector2( 2, 2 )
+text = "ENTER"
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect2/Container"]
+anchor_left = -0.27066
+anchor_top = -0.278965
+anchor_right = -0.27066
+anchor_bottom = -0.278965
+margin_right = 252.0
+margin_bottom = 28.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Label" type="Label" parent="ColorRect2/Container/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 245.0
+margin_bottom = 21.0
+text = "Enter the angle of bisector"
+align = 1
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2"]
+margin_left = 1098.0
+margin_top = 174.0
+margin_right = 1918.0
+margin_bottom = 874.0
+mouse_filter = 2
+color = Color( 0.858824, 0.858824, 0.858824, 0.392157 )
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2/ColorRect"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 90.0
+margin_top = 49.0
+margin_right = 340.0
+margin_bottom = 207.0
+rect_scale = Vector2( 3, 3 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+tab_size = 24
+script = ExtResource( 8 )
+
+[node name="StaticLine" type="Line2D" parent="ColorRect2/ColorRect"]
+width = 5.0
+default_color = Color( 0.0666667, 0.247059, 0.796078, 1 )
+script = ExtResource( 4 )
+
+[node name="answerLine" type="Line2D" parent="ColorRect2/ColorRect/StaticLine"]
+width = 3.0
+default_color = Color( 0.937255, 0.0156863, 0.0156863, 0.745098 )
+script = ExtResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="ColorRect2/ColorRect"]
+position = Vector2( 413, 348 )
+collision_layer = 16777216
+collision_mask = 16777216
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect2/ColorRect/Area2D"]
+light_mask = 524288
+position = Vector2( 8, 2 )
+shape = SubResource( 1 )
+
+[node name="transportir" parent="ColorRect2" instance=ExtResource( 3 )]
+position = Vector2( 426, 269 )
+scale = Vector2( 1, 1 )
+collision_layer = 16777216
+collision_mask = 16777216
+
+[node name="lineBody" parent="ColorRect2" instance=ExtResource( 5 )]
+position = Vector2( 433, 668 )
+scale = Vector2( 1.5, 1.5 )
+collision_layer = 16777216
+collision_mask = 16777216
+
+[node name="SlowmoController" parent="." instance=ExtResource( 7 )]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 131072
+collision_mask = 259
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 902, 1004 )
+shape = SubResource( 2 )
+
+[connection signal="scrolling" from="ColorRect2/Container/HScrollBar" to="." method="_on_HScrollBar_scrolling"]
+[connection signal="pressed" from="ColorRect2/Container/Button" to="." method="_on_Button_pressed"]
+[connection signal="body_entered" from="ColorRect2/ColorRect/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_shape_entered" from="ColorRect2/ColorRect/Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="script_changed" from="Area2D" to="." method="_on_Area2D_script_changed"]

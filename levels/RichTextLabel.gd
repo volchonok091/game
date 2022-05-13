@@ -1,3 +1,3 @@
 extends RichTextLabel
 func _ready():
-	tab_size = 100
+	tab_size = 50
