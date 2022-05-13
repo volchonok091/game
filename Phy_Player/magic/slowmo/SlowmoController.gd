@@ -3,10 +3,10 @@ extends Node
 var slowmo_active: bool = false 
 
 export(float) var normal_time_scale: float = 1.0
-export(float) var slowmo_time_scale: float = 0.5
+export(float) var slowmo_time_scale: float = 0.1
 
-export(float) var slowmo_enter_time: float = 0.5
-export(float) var slowmo_quit_time: float = 0.25
+export(float) var slowmo_enter_time: float = 0.1
+export(float) var slowmo_quit_time: float = 0.025
 
 onready var tween = $Tween
 

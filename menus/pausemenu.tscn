@@ -9,15 +9,11 @@
 [ext_resource path="res://skripts/pausemenu.gd" type="Script" id=7]
 [ext_resource path="res://GRAFICA/lvl-textures/sky.png" type="Texture" id=8]
 
-
 [node name="pausemenu" type="Control"]
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="background" type="TextureRect" parent="."]
 pause_mode = 2
